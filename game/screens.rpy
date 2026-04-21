@@ -1140,10 +1140,10 @@ screen playground():
     use game_menu(_("Mecanicas"), scroll="viewport"):
         hbox:
             vbox:
-                style_prefix "radio"
                 label _("Assets")
                 textbutton _("Layered sprite") action Preference("display", "window")
                 textbutton _("Recolor") action Preference("display", "fullscreen")
+                textbutton "Image Tools" action ShowMenu("image_tools")
 
 ################################################################################
 ## Pantallas adicionales
