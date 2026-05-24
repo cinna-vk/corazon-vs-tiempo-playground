@@ -1141,9 +1141,45 @@ screen playground():
         hbox:
             vbox:
                 label _("Assets")
-                textbutton _("Layered sprite") action Preference("display", "window")
-                textbutton _("Recolor") action Preference("display", "fullscreen")
+                textbutton "Layered sprite"
+                textbutton "Recolor"
                 textbutton "Image Tools" action ShowMenu("image_tools")
+            vbox:
+                label _("Pantallas")
+                textbutton "Personalizacion de MC" action ShowMenu("character_creator")
+
+image piel_01 = At("images/hand_rgb.png", RGBColorize(["#ffe1ad", "#f6d190", "#eec374", "#f1c47a", "#c69643", "#000000"], [227, 212, 195, 195, 148, 52]).transform)
+image piel_02 = At("images/hand_rgb.png", RGBColorize(["#de9a58", "#dc9652", "#c47d35", "#ca8035", "#8b5014", "#000000"], [227, 212, 195, 195, 148, 52]).transform)
+
+default tono = "01"
+# layeredimage mc:
+#    always "piel_[tono]"
+
+screen character_creator():
+    tag menu
+
+    hbox:
+        vbox:
+            label _("Piel")
+            hbox:
+                textbutton "1" action SetVariable("tono", "01")
+                textbutton "2" action SetVariable("tono", "02")
+                textbutton "3"
+                textbutton "4"
+                textbutton "5"
+            hbox:
+                textbutton "6"
+                textbutton "7"
+                textbutton "8"
+                textbutton "9"
+                textbutton "10"
+
+        frame:
+            background None
+            image "piel_[tono]"
+            
+        vbox:
+            textbutton _("Volver") action Return()
 
 ################################################################################
 ## Pantallas adicionales
