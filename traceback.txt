@@ -1,19 +1,7 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/screens.rpy", line 1158, in execute
-    screen character_creator():
-  File "game/screens.rpy", line 1158, in execute
-    screen character_creator():
-  File "game/screens.rpy", line 1161, in execute
-    hbox:
-  File "game/screens.rpy", line 1177, in execute
-    frame:
-  File "game/screens.rpy", line 1179, in execute
-    image mc
-  File "game/screens.rpy", line 1179, in <module>
-    image mc
-NameError: name 'mc' is not defined
+While processing the padding property of anonymous style:
+TypeError: 'float' object is not subscriptable
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -40,29 +28,33 @@ Full traceback:
     d.visit_all(callback, seen)
   File "C:\Users\Naomi\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
     d.visit_all(callback, seen)
-  File "C:\Users\Naomi\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+  [Previous line repeated 1 more time]
+  File "C:\Users\Naomi\renpy-8.1.1-sdk\renpy\display\screen.py", line 481, in visit_all
+    self.child.visit_all(callback, seen=None)
+  File "C:\Users\Naomi\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Naomi\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Naomi\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  [Previous line repeated 1 more time]
+  File "C:\Users\Naomi\renpy-8.1.1-sdk\renpy\display\core.py", line 683, in visit_all
     callback(self)
   File "C:\Users\Naomi\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
     root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\Naomi\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
-    self.update()
-  File "C:\Users\Naomi\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 1158, in execute
-    screen character_creator():
-  File "game/screens.rpy", line 1158, in execute
-    screen character_creator():
-  File "game/screens.rpy", line 1161, in execute
-    hbox:
-  File "game/screens.rpy", line 1177, in execute
-    frame:
-  File "game/screens.rpy", line 1179, in execute
-    image mc
-  File "game/screens.rpy", line 1179, in <module>
-    image mc
-NameError: name 'mc' is not defined
+  File "C:\Users\Naomi\renpy-8.1.1-sdk\renpy\display\behavior.py", line 1061, in per_interact
+    super(Button, self).per_interact()
+  File "C:\Users\Naomi\renpy-8.1.1-sdk\renpy\display\layout.py", line 1263, in per_interact
+    size_group = self.style.size_group
+  File "gen3-static/styleclass.pxi", line 525, in renpy.styledata.styleclass.Style.size_group.__get__
+  File "style.pyx", line 493, in renpy.style.StyleCore._get
+  File "style.pyx", line 710, in renpy.style.build_style
+  File "style.pyx", line 707, in renpy.style.build_style
+  File "gen3-static/style_functions.pyx", line 1417, in style_functions.padding_property
+  File "include/style_common.pxi", line 30, in style_functions.index_0
+TypeError: 'float' object is not subscriptable
 
 Windows-10-10.0.26200 AMD64
 Ren'Py 8.1.1.23060707
 CorazonvsTiempo 1.0
-Sun May 24 00:53:54 2026
+Mon May 25 15:52:13 2026

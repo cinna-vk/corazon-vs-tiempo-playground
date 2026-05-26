@@ -1149,11 +1149,11 @@ screen playground():
                 textbutton "Personalizacion de MC" action ShowMenu("character_creator")
 
 image piel_01 = At("images/hand_rgb.png", RGBColorize(["#ffe1ad", "#f6d190", "#eec374", "#f1c47a", "#c69643", "#000000"], [227, 212, 195, 195, 148, 52]).transform)
+image piel_01_btn = At("images/gui/character_creator/skin/button_skin.png", RGBColorize(["#f6d190"]).transform)
 image piel_02 = At("images/hand_rgb.png", RGBColorize(["#de9a58", "#dc9652", "#c47d35", "#ca8035", "#8b5014", "#000000"], [227, 212, 195, 195, 148, 52]).transform)
+image piel_02_btn = At("images/gui/character_creator/skin/button_skin.png", RGBColorize(["#dc9652"]).transform)
 
 default tono = "01"
-# layeredimage mc:
-#    always "piel_[tono]"
 
 screen character_creator():
     tag menu
@@ -1162,8 +1162,12 @@ screen character_creator():
         vbox:
             label _("Piel")
             hbox:
-                textbutton "1" action SetVariable("tono", "01")
-                textbutton "2" action SetVariable("tono", "02")
+                imagebutton:
+                    idle "piel_01_btn"
+                    action SetVariable("tono", "01")
+                imagebutton:
+                    idle "piel_02_btn"
+                    action SetVariable("tono", "02")
                 textbutton "3"
                 textbutton "4"
                 textbutton "5"

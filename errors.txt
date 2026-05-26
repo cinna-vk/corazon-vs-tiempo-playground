@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1173: 'idle' is not a keyword argument or valid child of the image statement.
-    idle "images/hand_rgb.png"
-        ^
+File "game/screens.rpy", line 1165: 'padding' is not a keyword argument or valid child of the hbox statement.
+    padding 10
+           ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Sat May 23 21:25:29 2026
+Mon May 25 15:55:11 2026
